@@ -1,1 +1,35 @@
-{"electrical":["rough inspection","final inspection"],"plumbing":["rough inspection","final inspection"],"hvac":["rough inspection","final inspection"],"building":["final building inspection"]}
+{
+  "permits": [
+    {
+      "type": "Building – Residential Alteration",
+      "inspections": [
+        { "type": "Final Building Inspection", "notes": "Required upon completion before approval." }
+      ],
+      "notes": "Covers kitchens, basements, windows, decks in residential."
+    },
+    {
+      "type": "Electrical (trade)",
+      "inspections": [
+        { "type": "Rough Electrical", "notes": "Before covering walls/ceilings." },
+        { "type": "Final Electrical", "notes": "" }
+      ],
+      "notes": "Needed when adding lights/outlets/circuits."
+    },
+    {
+      "type": "Plumbing (trade)",
+      "inspections": [
+        { "type": "Rough Plumbing", "notes": "Before covering walls/ceilings." },
+        { "type": "Final Plumbing", "notes": "" }
+      ],
+      "notes": "Needed when adding fixtures/water lines."
+    },
+    {
+      "type": "HVAC/Mechanical (trade)",
+      "inspections": [
+        { "type": "Rough HVAC", "notes": "Before concealment." },
+        { "type": "Mechanical Final", "notes": "" }
+      ],
+      "notes": "Needed when adding/modifying ducts/equipment."
+    }
+  ]
+}
