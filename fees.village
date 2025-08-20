@@ -1,0 +1,40 @@
+{
+  "fee_mode": "village_strict",
+  "minimum_fee": 60,
+  "building": {
+    "res_add_alt_deck_pool": { "type": "valuation_pct_per_thousand", "rate_per_1000": 13.5 },
+    "plan_exam": {
+      "residential": {
+        "new": 275,
+        "addition": 110,
+        "alteration": 65,
+        "accessory_gt_150": 75,
+        "deck_pool": 60
+      }
+    },
+    "erosion_control": {
+      "res_additions_alterations": 60
+    }
+  },
+  "hvac": {
+    "distribution_per_100sqft_conditioned": 2.2,
+    "distribution_minimum": 60
+  },
+  "electrical": {
+    "portal_minimum": 40,
+    "reference_unit_fees": {
+      "recessed_light": 5,
+      "gfc_outlet": 7,
+      "standard_outlet": 4,
+      "dedicated_circuit": 8
+    }
+  },
+  "plumbing": {
+    "portal_minimum": 40,
+    "reference_unit_fees": {
+      "sink": 8,
+      "toilet": 8,
+      "water_line": 8
+    }
+  }
+}
