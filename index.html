@@ -22,6 +22,55 @@
       </ul>
     </nav>
 
+    <!-- Ask PermitNow (Estimator) -->
+<section class="card" id="estimator">
+  <h2>Ask PermitNow</h2>
+  <div class="sub">Describe your project and (optionally) the valuation to estimate permits, inspections, and fees.</div>
+
+  <form id="estimator-form" autocomplete="off">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:flex-end;margin-top:10px">
+      <label>
+        <div>Address</div>
+        <input id="addr" type="text" placeholder="e.g., 1800 Falls Rd, Grafton WI" style="width:100%" />
+      </label>
+      <label>
+        <div>Valuation (USD)</div>
+        <input id="valuation" type="number" min="0" step="100" placeholder="e.g., 28000" style="width:100%" />
+      </label>
+    </div>
+
+    <label style="display:block;margin-top:10px">
+      <div>Project description</div>
+      <textarea id="desc" rows="3" placeholder="e.g., Kitchen remodel with 4 recessed lights, 2 GFCIs, water line to fridge" style="width:100%"></textarea>
+    </label>
+
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin:10px 0">
+      <label><input type="checkbox" id="t-elec"> Electrical</label>
+      <label><input type="checkbox" id="t-plum"> Plumbing</label>
+      <label><input type="checkbox" id="t-hvac"> HVAC/Mechanical</label>
+    </div>
+
+    <!-- Optional per‑fixture fields (reference fees only) -->
+    <details style="margin:6px 0">
+      <summary>Optional: per‑fixture counts (reference only)</summary>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px">
+        <label>Recessed lights <input id="f-recess" type="number" min="0" value="0" style="width:100%"></label>
+        <label>GFCI outlets <input id="f-gfci" type="number" min="0" value="0" style="width:100%"></label>
+        <label>Std outlets <input id="f-outlet" type="number" min="0" value="0" style="width:100%"></label>
+        <label>Water lines <input id="f-water" type="number" min="0" value="0" style="width:100%"></label>
+      </div>
+      <div class="sub">Village charges trade minimums in portal; per‑fixture calc shown as **reference** only.</div>
+    </details>
+
+    <div style="display:flex;gap:10px;margin-top:8px">
+      <button type="submit">Estimate</button>
+      <button type="button" id="btn-print" disabled>Download PDF</button>
+    </div>
+  </form>
+
+  <div id="estimator-result" style="margin-top:14px"></div>
+</section>
+
     <section class="card" id="fees">
       <h2>Permit Fees</h2>
       <div id="fees-content">Loading permit fee data...</div>
